@@ -1,0 +1,20 @@
+{
+  "name": "pure-css-infinite-chocolate-bar",
+  "version": "0.0.0",
+  "authors": [
+    "teles <josetelesmaciel@gmail.com>"
+  ],
+  "description": "A pure css animation to discover the trick behind the infinite chocolate bar trick.",
+  "keywords": [
+    "sass",
+    "chocolate"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
