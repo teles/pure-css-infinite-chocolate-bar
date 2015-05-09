@@ -16,5 +16,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "compass-mixins": "~1.0.2"
+  }
 }
