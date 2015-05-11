@@ -8,6 +8,9 @@ module.exports = function(grunt) {
     // Sass task
     // Generates css file from sass
     sass: {
+      options: {
+        loadPath: 'bower_components/compass-mixins/lib/'        
+      },
       dist: {
         files: [{
           'css/index.css':'sass/index.sass'
@@ -48,6 +51,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
  
   // tarefas
-  grunt.registerTask('default', ['watch']);
-  grunt.registerTask('start', ['clean','sass']);
+  grunt.registerTask('default', ['sass']);
 };
