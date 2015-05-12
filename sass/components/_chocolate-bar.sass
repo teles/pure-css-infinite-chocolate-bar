@@ -1,0 +1,54 @@
+// # Componente chocolate-bar
+
+// Padrão de background para a barra de chocolate
+%chocolate-background-pattern 
+  background-color: $chocolate-bar-background-color
+  @include background-image(linear-gradient(to right, $chocolate-bar-background-color 0, darken($chocolate-bar-background-color, 10) 5px, transparent 5px), linear-gradient(to bottom, $chocolate-bar-background-color 0, darken($chocolate-bar-background-color, 10) 5px, transparent 5px), linear-gradient(to left, lighten($chocolate-bar-background-color, 10) 5px, transparent 5px), linear-gradient(to top, lighten($chocolate-bar-background-color, 10) 5px, transparent 5px))
+  background-size: $chocolate-block-width $chocolate-block-height
+
+// ## Barra de chocolate
+.chocolate-bar
+  position: relative
+  height: $chocolate-bar-height
+  width: $chocolate-bar-width
+  @include box-sizing(border-box)
+  margin: 30px auto 0 auto
+  > .chocolate-bar-part
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100% 
+    z-index: 55
+    @extend %chocolate-background-pattern    
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      display: block
+      font-family: Montserrat, 'sans-serif'      
+      font-size: 30px
+      // Primeiro pedaço
+    &:nth-child(1)
+      z-index: 11
+      @include border-top-left-radius(6px)
+      clip-path: polygon(0 0, 20% 0, 20% 20%, 0 20%)
+      // Segundo pedaço
+    &:nth-child(2)
+      z-index: 22
+      clip-path: polygon(20% 0, 60% 0, 60% 20%, 20% 20%)
+      // Terceiro pedaço
+    &:nth-child(3)
+      z-index: 33
+      clip-path: polygon(0 20%, 60% 20%, 60% 45%, 0 70%)
+      @include border-top-right-radius(6px)
+      // Quarto pedaço
+    &:nth-child(4)
+      z-index: 44
+      clip-path: polygon(60% 0, 100% 0, 100% 30%, 60% 45%)    
+      // Quinto pedaço
+    &:nth-child(5)
+      z-index: 55
+      clip-path: polygon(0 70%, 100% 28%, 100% 100%, 0 100%)
+      @include border-bottom-left-radius(6px)
+      @include border-bottom-right-radius(6px)   

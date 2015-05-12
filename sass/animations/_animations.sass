@@ -1,0 +1,55 @@
+// ## Animation keyframes
+@include keyframes(animation-part1)    
+  26.4%
+    margin-top: - $chocolate-bar-height * .25
+    margin-left: - $chocolate-bar-width * .2
+    max-height: 100%
+  52.8%, 64.4%
+    margin-top: - $chocolate-bar-height * .25
+    margin-left: - $chocolate-bar-width * .7    
+    max-height: 100%
+  72%, 100%
+    margin-top: - $chocolate-bar-height * .25
+    margin-left: - $chocolate-bar-width * .7      
+    max-height: 0%  
+  
+@include keyframes(animation-part2)    
+  26.4%
+    margin-top: - $chocolate-bar-height * .25
+    margin-left: - $chocolate-bar-width * .1 
+  52.8%, 56%
+    margin-top: - $chocolate-bar-height * .25
+    margin-left: - $chocolate-bar-width * .6   
+  64%, 100%
+    margin-top: 0
+    margin-left: - $chocolate-bar-width * .2   
+  
+@include keyframes(animation-part3)      
+  24%
+    margin-top: 0
+    margin-left: 0
+  32%, 100%
+    margin-top: - $chocolate-block-height 
+    margin-left: $chocolate-block-width * 2
+    clip-path: polygon(0 20%, 60% 20%, 60% 50%, 0 75%)
+
+@include keyframes(animation-part4)
+  8%
+    margin-top: 0
+    margin-left: 0
+  26.4%
+    margin-top: - $chocolate-bar-height * .50
+    margin-left: 0
+  53%
+    margin-top: - $chocolate-bar-height * .50
+    margin-left: - $chocolate-bar-width * .60
+  64%, 100%
+    margin-top: $chocolate-bar-height * .2
+    margin-left: - $chocolate-bar-width * .6
+    clip-path: polygon(60% 0, 100% 0, 100% 35%, 60% 50%)  
+
+@include keyframes(animation-background-position-trick)              
+  0%, 62% 
+    background-position: 0 0 
+  72%, 100% 
+    background-position: $chocolate-bar-width 0 

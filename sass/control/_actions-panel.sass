@@ -1,0 +1,43 @@
+footer     
+  margin-top: 20px
+  text-align: center
+  
+.actions-panel-target    
+  padding: 10px 0
+  color: #fff
+  text-decoration: none    
+  font-size: 22px    
+  vertical-align: middle  
+  cursor: pointer
+  font-family: Montserrat, 'sans-serif' 
+  font-weight: bolder
+  &.actions-panel-target-trick
+    @include opacity(.5)        
+  &.actions-panel-target-share 
+    @include animation(animation-show-share 2s)
+    @include animation-delay($animation-base-time)        
+  .actions-panel-icon
+    vertical-align: middle
+    font-style: normal
+    &.actions-panel-icon-start:before
+      content: $fontawesome-pause
+    &.actions-panel-icon-trick:before
+      content: $fontawesome-magic
+    &.actions-panel-icon-share:before        
+      content: $fontawesome-share
+  .actions-panel-text
+    margin: 0 10px
+    vertical-align: middle
+    font-size: 18px             
+    display: inline      
+    &.actions-panel-text-start:after
+      content: 'Pause'
+    &.actions-panel-text-trick:after      
+      content: 'Show me the trick'
+    &.actions-panel-text-share:after      
+      content: 'Share on twitter.'        
+  &:hover
+    border-bottom: 1px solid #fff
+  &.actions-panel-target-disabled
+    color: darken($body-background-color, 10)
+    border-color: darken($body-background-color, 10)        

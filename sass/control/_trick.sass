@@ -1,0 +1,43 @@
+.trick:checked
+  ~ footer
+    .actions-panel-target-trick
+      @include opacity(1)
+  ~ .chocolate-bar
+    &:after
+      content: ''
+      width: 100%
+      height: 100%
+      display: block
+      clip-path: polygon(0 65%, 100% 23%, 100% 28%, 0 70%)
+      z-index: 66
+      position: relative
+      background-position: 0px 0px
+      background-repeat: no-repeat
+      background-color: $body-background-color
+    .chocolate-bar-part              
+      &:nth-child(1)
+        &:before
+          background-color: rgba(231, 76, 60, .5)
+          content: 'A'
+          line-height: $chocolate-bar-height * .2
+          text-indent: $chocolate-bar-width * .1 - 12px
+      &:nth-child(2)
+        &:before
+          background-color: rgba(230, 126, 34, .5) 
+          content: 'B'
+          line-height: $chocolate-bar-height * .2
+          text-indent: $chocolate-bar-width * .4 - 10px
+      &:nth-child(3)
+        &:before
+          background-color: rgba(142, 68, 173, .5) 
+          content: 'C'
+          line-height: $chocolate-bar-height * .8 - 15px
+          text-indent: $chocolate-bar-width * .3 - 10px   
+          clip-path: polygon(0 20%, 60% 20%, 60% 45%, 0 70%)
+      &:nth-child(4)
+        &:before
+          background-color: rgba(46, 204, 113, .5)  
+          content: 'D'
+          line-height: $chocolate-bar-height * .40
+          text-indent: $chocolate-bar-width * .8 - 10px  
+          clip-path: polygon(60% 0, 100% 0, 100% 30%, 60% 45%)              

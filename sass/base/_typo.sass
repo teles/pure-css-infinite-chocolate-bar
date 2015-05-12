@@ -1,0 +1,41 @@
+// Tipografia
+// Importa fontes do google e do weloveicons
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700)
+@import url(http://weloveiconfonts.com/api/?family=fontawesome)
+
+// Cabeçalho
+// Tipografia do cabeçalho
+header
+  h1
+    font-family: Montserrat, 'sans-serif'
+    font-size: 45px    
+    text-align: center
+    line-height: 1
+    margin-bottom: 10px
+    color: darken($body-background-color, 20)
+    .header-subtitile
+      font-size: .35em
+      margin-bottom: 5px
+      position: relative
+      &:before,
+      &:after
+        content: ''
+        position: absolute
+        width: 25%
+        height: 2px
+        top: 50%
+        margin-top: -1px
+        background-color: darken($body-background-color, 20)
+      &:before      
+        left: -35%
+      &:after
+        right: -35%
+    .header-title        
+      margin-top: 10px
+      margin-bottom: 20px
+      @include text-shadow(1px 1px lighten($body-background-color, 20%))
+
+/* inicializa o fontawesome */
+[class*="fontawesome-"]:before 
+  font-family: 'FontAwesome', sans-serif
+  font-style: normal
