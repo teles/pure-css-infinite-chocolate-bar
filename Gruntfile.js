@@ -17,39 +17,20 @@ module.exports = function(grunt) {
         }]
       }
     },
-
-    // Clean tasks
-    // These tasks clean css and font files
-    // clean: {
-    //   css: {
-    //     src: 'css/*'
-    //   },
-    //   fonts: {
-    //     src: 'fonts/*'
-    //   }
-    // },
-
-    // watch: {
-    //   sass: {
-    //     files: 'scss/*.scss',
-    //     tasks: ['clean:css','sass']
-    //   },
-    //   fonts: {
-    //     files: ['glyphs/*.svg'],
-    //     tasks: ['clean:fonts','webfont']
-    //   }      
-    // }    
-
+    autoprefixer: {
+      index: {
+        src: 'css/index.css',
+        dest: 'css/index.css'
+      }
+    }     
   };
  
   grunt.initConfig(gruntConfig);
  
   // carregando plugins
-  // grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  // grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-autoprefixer');
  
   // tarefas
-  grunt.registerTask('default', ['sass']);
+  grunt.registerTask('default', ['sass', 'autoprefixer']);
 };
